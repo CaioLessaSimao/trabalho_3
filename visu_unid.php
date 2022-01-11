@@ -27,7 +27,7 @@
             public $html;
 
             function __construct($id, $cep, $email, $numero, $telefone){
-                $this->string = "<tr><td>".$cep."</td><td>".$email."</td><td>".$numero."</td><td>".$telefone."</td><td><a href='alterarF.php?id=$id'>Alterar</a></td><td><a href='controle.php?id=$id&funcao=deletar&tabela=unidade&pagina=visu_unid.php'>Deletar</a></td></tr>";
+                $this->string = "<tr><td>".$cep."</td><td>".$email."</td><td>".$numero."</td><td>".$telefone."</td><td><a href='alterarU.php?id=$id'>Alterar</a></td><td><a href='controle.php?id=$id&funcao=deletar&tabela=unidade&pagina=visu_unid.php'>Deletar</a></td></tr>";
                 $this->html = $this->string;
             }
         }
