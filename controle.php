@@ -38,4 +38,13 @@
 	if($oper == "visu_func"){
 		header("Location: visu_func.php");
 	}
+
+	if($oper == "deletar"){
+		$tabela = $_REQUEST['tabela'];
+		$id = (int)$_REQUEST['id'];
+
+		$sql = "DELETE FROM '$tabela' WHERE id=$id;";
+
+		$query = mysqli_query($conn, $query);;
+	}
 ?>
