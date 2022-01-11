@@ -1,7 +1,9 @@
 <?php 
 	require_once "connection.php";
 
-	$oper = $_REQUEST['btn_menu'];
+	$oper = $_REQUEST['funcao'];
+
+
 
 	if($oper == "cad_unid"){
 		header("Location: cad_unid.php");
@@ -42,9 +44,14 @@
 	if($oper == "deletar"){
 		$tabela = $_REQUEST['tabela'];
 		$id = (int)$_REQUEST['id'];
+		$pagina = $_REQUEST['pagina'];
 
 		$sql = "DELETE FROM '$tabela' WHERE id=$id;";
 
-		$query = mysqli_query($conn, $query);;
+		$query = mysqli_query($conn, $query);
+
+
+
+		header("Location: $pagina");
 	}
 ?>
