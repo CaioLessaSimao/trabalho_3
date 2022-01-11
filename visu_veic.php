@@ -28,15 +28,15 @@
             public $string;
             public $html;
 
-            function __construct($placa, $numero, $data_aquisicao, $consumo, $motorista, $tipo, $marca){
-                $this->string = "<tr><td>".$placa."</td><td>".$numero."</td><td>".$data_aquisicao."</td><td>".$consumo."</td><td>".$motorista."</td><td>".$tipo."</td><td>".$marca."</td></tr>";
+            function __construct($placa, $numero, $data_aquisicao, $consumo, $motorista, $tipo, $marca, $id){
+                $this->string = "<tr><td>".$placa."</td><td>".$numero."</td><td>".$data_aquisicao."</td><td>".$consumo."</td><td>".$motorista."</td><td>".$tipo."</td><td>".$marca."</td><td><a href='alterarV.php?id=$id'>Alterar</a></td><td><a href='controle.php?id=$id&funcao=deletar&tabela=veiculo&pagina=visu_veic.php'>Deletar</a></td></tr>";
                 $this->html = $this->string;
             }
         }
 
 
 
-        $query = $query = "SELECT v.placa, v.numero, v.data_aquisicao, v.consumo, m.id, v.tipo, v.marca FROM veiculo AS v INNER JOIN motorista AS m ON
+        $query = $query = "SELECT v.placa, v.numero, v.data_aquisicao, v.consumo, m.id, v.tipo, v.marca, v.id FROM veiculo AS v INNER JOIN motorista AS m ON
         v.fk_motorista_id = m.id;";
 
         $result = mysqli_query($conn, $query);
@@ -52,7 +52,8 @@
         
         
         while ($row = mysqli_fetch_assoc($result)) {
-		    $placas[] = $row['placa'];
+		    $id = $row['id'];
+            $placas[] = $row['placa'];
 		    $numeros[] =  $row['numero']; 
             $datas_aquisicao[] = $row['data_aquisicao'];
             $motoristas[] = $row['id'];
@@ -77,7 +78,7 @@
             
             $marca = $marcas[$i];
 
-            $linha = new create_item($placa, $numero, $data_aquisicao, $consumo, $motorista, $tipo, $marca);
+            $linha = new create_item($placa, $numero, $data_aquisicao, $consumo, $motorista, $tipo, $marca, $id);
             
             $array[] = $linha;
         }
