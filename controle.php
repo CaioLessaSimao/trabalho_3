@@ -46,11 +46,9 @@
 		$id = (int)$_REQUEST['id'];
 		$pagina = $_REQUEST['pagina'];
 
-		$sql = "DELETE FROM '$tabela' WHERE id=$id;";
+		$sql = "DELETE FROM $tabela WHERE id=$id;";
 
-		$query = mysqli_query($conn, $query);
-
-
+		$query = mysqli_query($conn, $sql);
 
 		header("Location: $pagina");
 	}
