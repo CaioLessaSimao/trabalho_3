@@ -19,6 +19,7 @@
         
 
         class create_item {
+            public $id;
             public $nome;
             public $email;
             public $cpf;
@@ -27,19 +28,19 @@
             public $string;
             public $html;
 
-            function __construct($nome, $email, $cpf, $telefone, $dt_nasc){
-                $this->string = "<tr><td>".$nome."</td><td>".$email."</td><td>".$cpf."</td><td>".$telefone."</td><td>".$dt_nasc."</td></tr>";
+            function __construct($id, $nome, $email, $cpf, $telefone, $dt_nasc){
+                $this->string = "<tr><td>".$nome."</td><td>".$email."</td><td>".$cpf."</td><td>".$telefone."</td><td>".$dt_nasc."</td><td><a href='alterarF.php?id=$id'>Alterar</a></td><td><a href='controle.php?id=$id&funcao=deletar&tabela=funcionario&pagina=visu_func.php'>Deletar</a></td></tr>";
                 $this->html = $this->string;
             }
         }
 
 
 
-        $query = "SELECT nome, email, cpf, telefone, dt_nasc FROM funcionario;";
+        $query = "SELECT id, nome, email, cpf, telefone, dt_nasc FROM funcionario;";
 
         $result = mysqli_query($conn, $query);
 
-        
+        $ids = [];
         $nomes = [];
         $emails = [];
         $cpfs = [];
@@ -48,7 +49,8 @@
         
         
         while ($row = mysqli_fetch_assoc($result)) {
-		    $nomes[] = $row['nome'];
+		    $ids[] = $row['id'];
+            $nomes[] = $row['nome'];
 		    $emails[] =  $row['email']; 
             $cpfs[] = $row['cpf'];
             $telefones[] = $row['telefone'];
@@ -57,6 +59,9 @@
 
         
         for($i = 0; $i<count($nomes); $i++){
+            
+            $id = $ids[$i];
+            
             $nome = $nomes[$i];
 			
 			$email = $emails[$i];
@@ -67,7 +72,7 @@
 
             $dt_nasc = $dts_nasc[$i];
 
-            $linha = new create_item($nome, $email, $cpf, $telefone, $dt_nasc);
+            $linha = new create_item($id, $nome, $email, $cpf, $telefone, $dt_nasc);
             
             $array[] = $linha;
         }
