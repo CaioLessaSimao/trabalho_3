@@ -29,7 +29,7 @@
             public $html;
 
             function __construct($id, $nome, $email, $cpf, $telefone, $dt_nasc){
-                $this->string = "<tr><td>".$nome."</td><td>".$email."</td><td>".$cpf."</td><td>".$telefone."</td><td>".$dt_nasc."</td><td><a href='alterarF.php?id=$id'>Alterar</a></td><td><a href='controle.php?id=$id&funcao=deletar&tabela=funcionario&pagina=visu_func.php'>Deletar</a></td></tr>";
+                $this->string = "<tr><td>".$nome."</td><td>".$email."</td><td>".$cpf."</td><td>".$telefone."</td><td>".$dt_nasc."</td></tr>";
                 $this->html = $this->string;
             }
         }

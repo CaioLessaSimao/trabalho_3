@@ -17,6 +17,7 @@
     }
 
         class create_item {
+            public $id;
             public $nome;
             public $numero;
             public $tipo;
@@ -25,20 +26,20 @@
             public $string;
             public $html;
 
-            function __construct($nome, $numero, $tipo, $data_emissao, $data_vencimento){
-                $this->string = "<tr><td>".$nome."</td><td>".$numero."</td><td>".$tipo."</td><td>".$data_emissao."</td><td>".$data_vencimento."</td></tr>";
+            function __construct($id,$nome, $numero, $tipo, $data_emissao, $data_vencimento){
+                $this->string = "<tr><td>".$nome."</td><td>".$numero."</td><td>".$tipo."</td><td>".$data_emissao."</td><td>".$data_vencimento."</td><td><a href='alterarC.php?id=$id'>Alterar</a></td><td><a href='controle.php?id=$id&funcao=deletar&tabela=cnh&pagina=visu_cnh.php'>Deletar</a></td></tr>";
                 $this->html = $this->string;
             }
         }
 
 
 
-        $query = "SELECT c.numero,c.tipo, c.data_emissao, c.data_vencimento,m.nome FROM cnh AS c INNER JOIN motorista AS m ON
+        $query = "SELECT c.id,c.numero,c.tipo, c.data_emissao, c.data_vencimento,m.nome FROM cnh AS c INNER JOIN motorista AS m ON
         c.fk_motorista_id = m.id;";
 
         $result = mysqli_query($conn, $query);
 
-        
+        $ids = [];
         $nomes = [];
         $numeros = [];
         $tipos = [];
@@ -47,7 +48,8 @@
         
         
         while ($row = mysqli_fetch_assoc($result)) {
-		    $nomes[] = $row['nome'];
+		    $ids[] = $row['id'];
+            $nomes[] = $row['nome'];
 		    $numeros[] =  $row['numero']; 
             $tipos[] = $row['tipo'];
             $datas_vencimento[] = $row['data_vencimento'];
@@ -56,6 +58,8 @@
 
         
         for($i = 0; $i<count($nomes); $i++){
+            $id = $ids[$i];
+            
             $nome = $nomes[$i];
 			
 			$numero = $numeros[$i];
@@ -66,7 +70,7 @@
 
             $data_vencimento = $datas_vencimento[$i];
 
-            $linha = new create_item($nome, $numero, $tipo, $data_emissao, $data_vencimento);
+            $linha = new create_item($id,$nome, $numero, $tipo, $data_emissao, $data_vencimento);
             
             $array[] = $linha;
         }
