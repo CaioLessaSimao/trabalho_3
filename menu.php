@@ -1,7 +1,7 @@
-
 <?php 
     include "header.php";
 ?>
+
 <link rel="stylesheet" type="text/css" href="css/styles.css">
         <div class="div_cadastro">
 

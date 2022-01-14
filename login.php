@@ -1,3 +1,4 @@
+
 <html>
 
     <head>
@@ -63,6 +64,15 @@
     </head>
 
     <body>
+
+        <div class="topnav"><nav>
+                <ul>
+                    <li><figure><img id="logo" src="imagem/detran2.png"></figure></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                    <li><a href="consulta.html">Consulta</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                </ul></nav>
+        </div>
 
         <div class="login">
 
