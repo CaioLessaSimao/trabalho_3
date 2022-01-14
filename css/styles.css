@@ -1,0 +1,270 @@
+/* Header */
+    
+header{
+
+    background-color: #ffffff;
+    
+}
+
+.header_slogan{
+
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: rgba(35, 0, 116, 0.8);
+    color: rgb(255, 255, 255);
+    box-shadow:
+        0px 3px 5px -1px rgba(35, 0, 116, 0.5),
+        0px 6px 10px 0px rgba(35, 0, 116, 0.5),
+        0px 1px 18px 0px rgba(35, 0, 116, 0.5);   
+
+}
+
+#logo{
+
+  
+    width: 50px;
+    height: 50px;
+    text-align: center; 
+    border-radius: 40%;
+    overflow: hidden;
+    margin-left: -40px;
+    margin-top: -20px;
+    margin-bottom: -19px;   
+
+}
+
+
+/* Body */
+body{
+
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14pt;
+	background-color:#ffffff;
+	overflow-x: hidden;
+
+}
+
+article{
+    font-size: 11pt;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+
+
+
+/* Barra de Navegação*/
+
+.topnav {
+
+    overflow: hidden;
+    background-color: rgb(35, 0, 116);
+
+}
+  
+.topnav a {
+
+    float: left;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    margin-left: -10px;
+}
+  
+.topnav a:hover {
+
+    background-color: #ffffff;
+    color: rgb(35, 0, 116);
+}
+  
+.topnav a.active {
+
+    background-color: #979797;
+    color: white;
+
+}
+
+ul{
+
+    padding:0;
+    padding-top: 2px;
+    margin: 0 0 0 10px;
+    list-style: none;
+
+}
+
+li{
+    float:left;
+}
+
+/* Login */
+.login{
+    height: 550px;
+    width: 100%;
+    padding-top: 12px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(gold, rgb(35, 0, 116));
+    
+}
+
+.login_form{
+
+    padding-top: 10px;
+    padding-bottom:50px;
+    padding-left: 70px;
+    padding-right: 70px;
+    background: linear-gradient(purple, darkblue);
+    text-align: center;
+    border: gold solid;
+    position: absolute;
+    box-shadow:
+        0px 3px 5px -1px rgba(35, 0, 116, 0.5),
+        0px 6px 10px 0px rgba(35, 0, 116, 0.5),
+        0px 1px 18px 0px rgba(35, 0, 116, 0.5);
+    
+}
+
+/* Cadastro */
+
+.cadastro{
+    height: 550px;
+    width: 100%;
+    padding-top: 12px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(gold, rgb(35, 0, 116));
+}
+
+.cadastro_form{
+
+    padding-top: 10px;
+    padding-bottom:50px;
+    padding-left: 70px;
+    padding-right: 70px;
+    background: linear-gradient(purple, darkblue);
+    border: gold solid;
+    position: absolute;
+    text-align: center;
+    
+    box-shadow:
+        0px 3px 5px -1px rgba(35, 0, 116, 0.5),
+        0px 6px 10px 0px rgba(35, 0, 116, 0.5),
+        0px 1px 18px 0px rgba(35, 0, 116, 0.5);
+    
+}
+
+/* Consulta */
+.consulta{
+
+    height: 550px;
+    width: 100%;
+    padding-top: 12px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(gold, rgb(35, 0, 116));
+
+}
+        
+.tabela{
+
+    padding-top: 10px;
+    padding-bottom:50px;
+    padding-left: 70px;
+    padding-right: 70px;
+    background: linear-gradient(purple, darkblue);
+    text-align: center;
+    color: white;
+    border: gold solid;
+    position: absolute;
+    box-shadow:
+        0px 3px 5px -1px rgba(35, 0, 116, 0.5),
+        0px 6px 10px 0px rgba(35, 0, 116, 0.5),
+        0px 1px 18px 0px rgba(35, 0, 116, 0.5);
+    
+
+}
+
+
+
+
+/* Sobre */
+
+.sobre{
+    height: 550px;
+    width: 100%;
+    padding-top: 12px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(gold, rgb(35, 0, 116));
+}
+
+
+
+.txt{
+    padding-top: 50px;
+    padding-bottom:50px;
+    padding-left: 70px;
+    padding-right: 70px;
+    background-color: white;
+    text-align: center;
+    border: gold solid;
+    position: absolute;
+    box-shadow:
+        0px 3px 5px -1px rgba(35, 0, 116, 0.5),
+        0px 6px 10px 0px rgba(35, 0, 116, 0.5),
+        0px 1px 18px 0px rgba(35, 0, 116, 0.5);
+}
+
+/* Para todos */
+table{
+
+    padding:0;
+    padding-top: 5px;
+    padding-left: 10px;
+    margin: 0 0 0 10px;
+    list-style: none;
+    
+}
+
+th{
+
+    padding-top: 15px;
+    padding-left: 15px;
+    
+}
+
+td{
+
+    padding-top: 10px;
+    padding-left: 10px;
+    
+}
+
+button{
+    
+    background: rgb(35, 0, 116);
+    color: white;
+    border-radius: 10%;
+    font: bold 15px arial, sans-serif;
+    text-shadow:none;
+}
+
+input{
+    
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    border-color: rgb(35, 0, 116);
+    margin-bottom: 10px;
+    border-radius: 50px;
+}
+
+h3{
+    color: white;
+}

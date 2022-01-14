@@ -2,6 +2,7 @@
     <head>
         <title></title>
         <meta charset = 'utf-8' lang = 'pt-BR'/>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
         <?php
             $op = '';
             $num = '';
@@ -85,54 +86,63 @@
         }
         ?>
     </head>
+    
     <body>
-        <div>
-            <form id = 'form_cnh' action = 'cad_cnh.php' method = 'POST'>
-                <label for = 'num'>Insira o Número da Carteira de Habilitação Nacional:</label>
-                <input type = 'text' name = 'num'/><br>
+        
+    <div class="cadastro">
+            
+            <div class="cadastro_form">
+    
+                <form id = 'form_cnh' action = 'cad_cnh.php' method = 'POST'>
+                    <label for = 'num'>Insira o Número da Carteira de Habilitação Nacional:</label>
+                    <input type = 'text' name = 'num'/><br>
 
-                <label for = 'dt_em'>Insira a data de emissão do documento:</label>
-                <input type = 'date' name = 'dt_em'></input><br>
+                    <label for = 'dt_em'>Insira a data de emissão do documento:</label>
+                    <input type = 'date' name = 'dt_em'></input><br>
 
-                <label for = 'dt_ven'>Insira a data de vencimento do documento:</label>
-                <input type = 'date' name = 'dt_ven'></input><br>
-                
-                <label for = 'mot'>Escolha o motorista possuidor do documento:</label>
-                <select name="mot" form = 'form_cnh'>
-                    <?php
-                        require_once "connection.php";
-                        	
-                        $sql = "SELECT id,nome FROM motorista;";
-
-                        $resultado = mysqli_query($conn,$sql);
-
-                        while($dados = mysqli_fetch_array($resultado)):
-
-                    ?>
-                        
-  					<option value = "<?php echo $dados['id'];?>"><?php echo $dados['nome'];?></option>
-  							
-  						<?php endwhile; ?>
-
-  						<?php while($dados = mysqli_fetch_array($resultado)):?>
-  							
-							<option value = "<?php echo $dados['id'];?>"><?php echo $dados['nome'];?></option>
-  							
-  						<?php endwhile; ?>
-
-                    </select><br>
-                <label for = 'tipo'>Selecione o tipo de Carteira de Habilitação:</label>
-                <select name = 'tipo' form = 'form_cnh'>
-                    <option value = 'A'>Tipo A (motos e triciclos)</option>
-                    <option value = 'B'>Tipo B (carros de passeio)</option>
-                    <option value = 'C'>Tipo C (veículos de carga acima de 3,5 ton)</option>
-                    <option value = 'D'>Tipo D (veículos com mais de 8 passageiros)</option>
-                    <option value = 'E'>Tipo E (veículos com unidade acoplada acima de 6 ton)</option>
-                </select><br>
+                    <label for = 'dt_ven'>Insira a data de vencimento do documento:</label>
+                    <input type = 'date' name = 'dt_ven'></input><br>
                     
-                <button type = 'submit' name = 'btn_cad_cnh' value = 'finalizar'>Finalizar Cadastro</button><br>
-                <button type = 'submit' name = 'btn_cad_cnh' value = 'retornar'>Retornar</button><br>
-            </form>
-        <div>
+                    <label for = 'mot'>Escolha o motorista possuidor do documento:</label>
+                    <select name="mot" form = 'form_cnh'>
+                        <?php
+                            require_once "connection.php";
+                                
+                            $sql = "SELECT id,nome FROM motorista;";
+
+                            $resultado = mysqli_query($conn,$sql);
+
+                            while($dados = mysqli_fetch_array($resultado)):
+
+                        ?>
+                            
+                        <option value = "<?php echo $dados['id'];?>"><?php echo $dados['nome'];?></option>
+                                
+                            <?php endwhile; ?>
+
+                            <?php while($dados = mysqli_fetch_array($resultado)):?>
+                                
+                                <option value = "<?php echo $dados['id'];?>"><?php echo $dados['nome'];?></option>
+                                
+                            <?php endwhile; ?>
+
+                        </select><br>
+                    <label for = 'tipo'>Selecione o tipo de Carteira de Habilitação:</label>
+                    <select name = 'tipo' form = 'form_cnh'>
+                        <option value = 'A'>Tipo A (motos e triciclos)</option>
+                        <option value = 'B'>Tipo B (carros de passeio)</option>
+                        <option value = 'C'>Tipo C (veículos de carga acima de 3,5 ton)</option>
+                        <option value = 'D'>Tipo D (veículos com mais de 8 passageiros)</option>
+                        <option value = 'E'>Tipo E (veículos com unidade acoplada acima de 6 ton)</option>
+                    </select><br>
+                        
+                    <button type = 'submit' name = 'btn_cad_cnh' value = 'finalizar'>Finalizar Cadastro</button><br>
+                    <button type = 'submit' name = 'btn_cad_cnh' value = 'retornar'>Retornar</button><br>
+                </form>
+            <div>
+
+        </div>
+    
     </body>
+
 </html>

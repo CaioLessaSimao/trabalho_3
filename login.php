@@ -1,7 +1,10 @@
-<htm>
+<html>
+
     <head>
+
         <title></title>
         <meta charset = 'utf-8' lang = 'pt-BR'/>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
 
         <?php
             include_once "connection.php";
@@ -58,16 +61,28 @@
             */
         ?>
     </head>
+
     <body>
-        <form action = 'login.php' method = 'GET'>
-            <label for = 'email'>Insira seu e-mail:</label>
-            <input type = 'text' name = 'email'></input><br>
-            
-            <label for = 'senha'>Insira sua senha:</label>
-            <input type = 'password' name = 'senha'></input>
-            
-            <button type = 'submit' name = 'btn_login' value = 'entrar'>Entrar</button><br>
-            <button type = 'submit' name = 'btn_login' value = 'retornar'>Retornar</button><br>
-        </form>
+
+        <div class="login">
+
+                <div class="login_form">
+                        
+                    <form action = 'login.php' method = 'GET'>
+                        <label for = 'email'>Insira seu e-mail:</label>
+                        <input type = 'text' name = 'email'></input><br>
+                        
+                        <label for = 'senha'>Insira sua senha:</label>
+                        <input type = 'password' name = 'senha'></input>
+                        
+                        <button type = 'submit' name = 'btn_login' value = 'entrar'>Entrar</button><br>
+                        <button type = 'submit' name = 'btn_login' value = 'retornar'>Retornar</button><br>
+                    </form>
+
+                </div>
+                
+        </div>
+
     </body>
+
 </html>

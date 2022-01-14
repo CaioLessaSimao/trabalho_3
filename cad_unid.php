@@ -2,6 +2,7 @@
     <head>
         <title></title>
         <meta charset = 'utf-8' lang = 'pt-BR'/>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
         <?php
             
             $op = '';
@@ -75,24 +76,34 @@
             }
         ?>
     </head>
+    
     <body>
-        <div>
-            <form action = 'cad_unid.php' method = 'POST'>
-                <label for = 'cep'>Insira o CEP da unidade</label>
-                <input type = 'text' name = 'cep'></input><br>
+      
+        <div class="cadastro">
 
-                <label for = 'num'>Insira o número da unidade</label>
-                <input type = 'text' name = 'num'></input><br>
+            <div class="cadastro_form">
 
-                <label for = 'tel'>Insira o telefone da unidade</label>
-                <input type = 'text' name = 'tel'></input><br>
+                <form action = 'cad_unid.php' method = 'POST'>
+                    <label for = 'cep'>Insira o CEP da unidade</label>
+                    <input type = 'text' name = 'cep'></input><br>
 
-                <label for = 'email'>Insira o email da unidade</label>
-                <input type = 'email' name = 'email'></input><br>
+                    <label for = 'num'>Insira o número da unidade</label>
+                    <input type = 'text' name = 'num'></input><br>
 
-                <button type = 'submit' name = 'btn_cad_unid' value = 'finalizar'>Finalizar</button><br>
-                <button type = 'submit' name = 'btn_cad_unid' value = 'retornar'>Retornar</button>
-            </form>
-        <div>
+                    <label for = 'tel'>Insira o telefone da unidade</label>
+                    <input type = 'text' name = 'tel'></input><br>
+
+                    <label for = 'email'>Insira o email da unidade</label>
+                    <input type = 'email' name = 'email'></input><br>
+
+                    <button type = 'submit' name = 'btn_cad_unid' value = 'finalizar'>Finalizar</button><br>
+                    <button type = 'submit' name = 'btn_cad_unid' value = 'retornar'>Retornar</button>
+                </form>
+            
+            <div> 
+            
+        </div>
+
     </body>
+
 </html>

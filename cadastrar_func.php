@@ -1,7 +1,8 @@
 <html>
     <head>
-        <title>Cadastrar Funcionário</title>
+        <title></title>
         <meta charset = 'utf-8' lang = 'pt-BR'/>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
 
         <?php
             require_once "connection.php";
@@ -112,32 +113,40 @@
         ?>
     </head>
     <body>
-        <div>
-            <form action = 'cadastrar_func.php' method = 'POST' enctype="multipart/form-data">
-                <label for = 'nome'>Insira seu nome:</label>
-                <input type = 'text' name = 'nome'/><br>
-                
-                <label for = 'email'>Insira seu email:</label>
-                <input type = 'email' name = 'email'/><br>
-                
-                <label for = 'dt_nasc'>Insira seu data de nascimento:</label>
-                <input type = 'date' name = 'dt_nasc'/><br>
 
-                <label for = 'tel'>Insira seu telefone:</label>
-                <input type = 'text' name = 'tel'/><br>
+        <div class="cadastro">
+            
+            <div class="cadastro_form">
 
-                <label for = 'cpf'>Insira seu cpf:</label>
-                <input type = 'text' name = 'cpf'/><br>
-                
-                <label for = 'senha'>Insira sua senha (ela deve conter no mínimo 8 caracteres):</label>
-                <input type = 'password' name = 'senha'/><br>
+                <form action = 'cadastrar_func.php' method = 'POST' enctype="multipart/form-data">
+                    <label for = 'nome'>Insira seu nome:</label>
+                    <input type = 'text' name = 'nome'/><br>
+                    
+                    <label for = 'email'>Insira seu email:</label>
+                    <input type = 'email' name = 'email'/><br>
+                    
+                    <label for = 'dt_nasc'>Insira seu data de nascimento:</label>
+                    <input type = 'date' name = 'dt_nasc'/><br>
 
-                <label for = 'arquivo'>Envie sua identidade</label>
-                <input type="file" name="arquivo"/><br>
-                
-                <button type = 'submit' name = 'btn_cad_func' value = 'finalizar'>Finalizar Cadastro</button><br>
-                <button type = 'submit' name = 'btn_cad_func' value = 'retornar'>Retornar</button><br>
-            </form>
+                    <label for = 'tel'>Insira seu telefone:</label>
+                    <input type = 'text' name = 'tel'/><br>
+
+                    <label for = 'cpf'>Insira seu cpf:</label>
+                    <input type = 'text' name = 'cpf'/><br>
+                    
+                    <label for = 'senha'>Insira sua senha (ela deve conter no mínimo 8 caracteres):</label>
+                    <input type = 'password' name = 'senha'/><br>
+
+                    <label for = 'arquivo'>Envie sua identidade</label>
+                    <input type="file" name="arquivo"/><br>
+                    
+                    <button type = 'submit' name = 'btn_cad_func' value = 'finalizar'>Finalizar Cadastro</button><br>
+                    <button type = 'submit' name = 'btn_cad_func' value = 'retornar'>Retornar</button><br>
+                </form>
+
+            </div>
         </div>
+
     </body>
+
 </html>

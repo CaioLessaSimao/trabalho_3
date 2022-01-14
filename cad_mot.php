@@ -2,6 +2,7 @@
     <head>
         <title></title>
         <meta charset = 'utf-8' lang = 'pt-BR'/>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
         <?php
             $op = '';
             $nome = '';
@@ -65,24 +66,34 @@
             }
         ?>
     </head>
+
     <body>
-        <div>
-            <form action = 'cad_mot.php' method = 'POST'>
-                <label for = 'nome'>Insira o nome do motorista:</label>
-                <input type = 'text' name = 'nome'/><br>
-                
-                <label for = 'email'>Insira o email do motorista:</label>
-                <input type = 'email' name = 'email'/><br>
 
-                <label for = 'cpf'>Insira o cpf do motorista:</label>
-                <input type = 'text' name = 'cpf'/><br>
+        <div class="cadastro">
 
-                <label for = 'tel'>Insira o telefone do motorista:</label>
-                <input type = 'text' name = 'tel'/><br>
+            <div class="cadastro_form">
                 
-                <button type = 'submit' name = 'btn_cad_mot' value = 'finalizar'>Finalizar Cadastro</button><br>
-                <button type = 'submit' name = 'btn_cad_mot' value = 'retornar'>Retornar</button><br>
-            </form>
-        <div>
+                <form action = 'cad_mot.php' method = 'POST'>
+                    <label for = 'nome'>Insira o nome do motorista:</label>
+                    <input type = 'text' name = 'nome'/><br>
+                    
+                    <label for = 'email'>Insira o email do motorista:</label>
+                    <input type = 'email' name = 'email'/><br>
+
+                    <label for = 'cpf'>Insira o cpf do motorista:</label>
+                    <input type = 'text' name = 'cpf'/><br>
+
+                    <label for = 'tel'>Insira o telefone do motorista:</label>
+                    <input type = 'text' name = 'tel'/><br>
+                    
+                    <button type = 'submit' name = 'btn_cad_mot' value = 'finalizar'>Finalizar Cadastro</button><br>
+                    <button type = 'submit' name = 'btn_cad_mot' value = 'retornar'>Retornar</button><br>
+                </form>
+
+            <div>
+
+        </div>
+
     </body>
+
 </html>

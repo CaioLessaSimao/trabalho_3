@@ -2,6 +2,7 @@
     <head>
     <title></title>
         <meta charset = 'utf-8' lang = 'pt-BR'/>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
     
     <?php
         require_once "connection.php";
