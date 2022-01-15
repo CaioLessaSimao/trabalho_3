@@ -183,6 +183,69 @@ li{
 }
 
 
+/* Menu */
+
+
+.div_menu{
+
+    height: 550px;
+    width: 100%;
+    padding-top: 12px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(gold, rgb(35, 0, 116));
+
+}
+
+.botoes_cadastro{
+
+    float: left;
+    padding-top:150px;
+    height: 200px;
+    width: 50%;
+    display: flex;
+    justify-content: center;    
+
+}
+
+.div_cadastro{
+    
+    
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 70px;
+    padding-right: 70px;
+    background: linear-gradient(purple, darkblue);
+    border: gold solid;
+    position: absolute;
+    text-align: center;
+
+}
+
+.botoes_visu{
+
+    float: right;
+    padding-top:150px;
+    height: 200px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    
+    
+}
+
+.div_visu{
+    
+    
+    padding-top: 10px;
+    padding-left: 70px;
+    padding-right: 70px;
+    background: linear-gradient(purple, darkblue);
+    border: gold solid;
+    position: absolute;
+    text-align: center;
+
+}
 
 
 /* Aparência que terá o seletor de arquivo */

@@ -29,6 +29,13 @@
 						<li><a href="sobre.php">Sobre</a></li>
 						<li><a href="index.php">Sair</a></li>
 					</ul></nav>
-			</div>
+	</div>
+
+
+	<div class ="header_content">
+			
+		<div class="header_slogan">Orgão Governamental Genérico Responsável pelos Motoristas</div>
+
+	</div>
 
 </body>
