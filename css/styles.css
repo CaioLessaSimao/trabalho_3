@@ -139,7 +139,7 @@ li{
 .login_form{
 
     padding-top: 10px;
-    padding-bottom:50px;
+    padding-bottom:5px;
     padding-left: 70px;
     padding-right: 70px;
     background: linear-gradient(purple, darkblue);
@@ -167,7 +167,7 @@ li{
 .cadastro_form{
 
     padding-top: 10px;
-    padding-bottom:10px;
+    padding-bottom:15px;
     padding-left: 70px;
     padding-right: 70px;
     background: linear-gradient(purple, darkblue);
