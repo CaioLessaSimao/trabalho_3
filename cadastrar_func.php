@@ -114,12 +114,10 @@
     </head>
     <body>
 
-        <div class="topnav"><nav>
+    <div class="topnav_index"><nav>
                 <ul>
                     <li><figure><img id="logo" src="imagem/detran2.png"></figure></li>
-                    <li><a href="cadastro.html">Cadastro</a></li>
-                    <li><a href="consulta.html">Consulta</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a>Orgão Governamental Genérico Responsável pelos Motoristas</a></li>
                 </ul></nav>
         </div>
 
@@ -146,8 +144,8 @@
                     <label for = 'senha'>Insira sua senha (ela deve conter no mínimo 8 caracteres):</label>
                     <input type = 'password' name = 'senha'/><br>
 
-                    <label for = 'arquivo'>Envie sua identidade</label>
-                    <input type="file" name="arquivo"/><br>
+                    <label id='selecao' for='selecao-arquivo'>Envie sua Identidade</label>
+                    <input id='selecao-arquivo' type='file'>
                     
                     <button type = 'submit' name = 'btn_cad_func' value = 'finalizar'>Finalizar Cadastro</button><br>
                     <button type = 'submit' name = 'btn_cad_func' value = 'retornar'>Retornar</button><br>
@@ -159,3 +157,4 @@
     </body>
 
 </html>
+

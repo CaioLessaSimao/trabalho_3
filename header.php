@@ -26,9 +26,7 @@
 	<div class="topnav"><nav>
 					<ul>
 						<li><figure><img id="logo" src="imagem/detran2.png"></figure></li>
-						<li><a href="cadastro.html">Cadastro</a></li>
-						<li><a href="consulta.html">Consulta</a></li>
-						<li><a href="sobre.html">Sobre</a></li>
+						<li><a href="sobre.php">Sobre</a></li>
 						<li><a href="index.php">Sair</a></li>
 					</ul></nav>
 			</div>

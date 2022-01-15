@@ -75,12 +75,15 @@ article{
     font-size: 25px;
     margin-left: -10px;
 }
-  
+
 .topnav a:hover {
 
     background-color: #ffffff;
     color: rgb(35, 0, 116);
+    
 }
+
+
   
 .topnav a.active {
 
@@ -88,6 +91,26 @@ article{
     color: white;
 
 }
+
+
+.topnav_index {
+
+    overflow: hidden;
+    background-color: rgb(35, 0, 116);
+
+}
+  
+.topnav_index a {
+
+    float: left;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    margin-left: -10px;
+}
+
 
 ul{
 
@@ -157,6 +180,45 @@ li{
         0px 6px 10px 0px rgba(35, 0, 116, 0.5),
         0px 1px 18px 0px rgba(35, 0, 116, 0.5);
     
+}
+
+
+
+
+/* Aparência que terá o seletor de arquivo */
+#selecao {
+
+    background: linear-gradient(blue, purple);
+    color: white;
+    
+    font: bold 15px arial, sans-serif;
+    text-shadow:rgb(35, 0, 116);
+    padding: 20px 10px;
+    width: 200px;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    cursor: pointer;
+    
+  }
+
+
+input[type="file"] {
+    display: none;
+}
+
+#label_arquivo {
+
+    background-color: rgb(35, 0, 116);
+    color: white;
+    text-align: center;
+    border-radius: 10%;    
+    padding: 20px 10px;
+    width: 200px;
+    color: #FFF;
+    display: block;
+    margin-top: 10px;
+    cursor: pointer;
 }
 
 /* Consulta */
