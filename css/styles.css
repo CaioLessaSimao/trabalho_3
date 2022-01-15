@@ -127,7 +127,7 @@ li{
 
 /* Login */
 .login{
-    height: 550px;
+    height: 100%;
     width: 100%;
     padding-top: 12px;
     display: flex;
@@ -156,7 +156,7 @@ li{
 /* Cadastro */
 
 .cadastro{
-    height: 550px;
+    height: 100%;
     width: 100%;
     padding-top: 12px;
     display: flex;
@@ -167,7 +167,7 @@ li{
 .cadastro_form{
 
     padding-top: 10px;
-    padding-bottom:50px;
+    padding-bottom:10px;
     padding-left: 70px;
     padding-right: 70px;
     background: linear-gradient(purple, darkblue);
@@ -182,13 +182,12 @@ li{
     
 }
 
-
 /* Menu */
 
 
 .div_menu{
 
-    height: 550px;
+    height: 100%;
     width: 100%;
     padding-top: 12px;
     display: flex;
@@ -248,7 +247,7 @@ li{
 }
 
 
-/* Aparência que terá o seletor de arquivo */
+/* Aparência do seletor de arquivo */
 #selecao {
 
     background: linear-gradient(blue, purple);
@@ -287,7 +286,7 @@ input[type="file"] {
 /* Consulta */
 .consulta{
 
-    height: 550px;
+    height: 100%;
     width: 100%;
     padding-top: 12px;
     display: flex;
@@ -299,7 +298,7 @@ input[type="file"] {
 .tabela{
 
     padding-top: 10px;
-    padding-bottom:50px;
+    padding-bottom:10px;
     padding-left: 70px;
     padding-right: 70px;
     background: linear-gradient(purple, darkblue);
@@ -317,11 +316,10 @@ input[type="file"] {
 
 
 
-
 /* Sobre */
 
 .sobre{
-    height: 550px;
+    height: 100%;
     width: 100%;
     padding-top: 12px;
     display: flex;
@@ -361,6 +359,7 @@ th{
 
     padding-top: 15px;
     padding-left: 15px;
+    color: white;
     
 }
 
@@ -368,6 +367,7 @@ td{
 
     padding-top: 10px;
     padding-left: 10px;
+    color: white;
     
 }
 
@@ -399,3 +399,26 @@ label{
     color: white;
 
 }
+
+a.btn-crud {
+    width: 100px;
+    background: purple;
+    font-weight:bold;
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+    padding: 5px 5px;
+    margin: 5px 5px;
+  }
+
+
+select {
+    
+    width: 268px;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 1;
+    border-radius: 20px;
+    height: 34px;
+    -webkit-appearance: none;
+ }

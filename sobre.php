@@ -24,15 +24,26 @@
 		
 		<div class="sobre">
 
+		
+               
+
 			<div class="txt">	
 				<h2>Quem somos?</h2>
 				<p>Somos a OGGRM organização responsavel pela fiscalização dos motoristas do Brasil</p>
 				<h2>Qual é o nosso objetivo?</h3>
 				<p>Vigiar e punir todo motorista que não segue as regras</p>
+			
+				<form id = 'bot_ret' action = 'menu.php' method = 'POST'>
+                
+					<button type = 'submit' name = 'btn_ret_vis' value = 'retornar'>Menu</button><br>
+
+				</form>
+
 			</div>
+
 		</div>
 
-		<footer>Todos os direitos reservados</footer>
+		
 
 	</body>
 

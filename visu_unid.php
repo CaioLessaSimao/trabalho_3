@@ -32,7 +32,7 @@
             public $html;
 
             function __construct($id, $cep, $email, $numero, $telefone){
-                $this->string = "<tr><td>".$cep."</td><td>".$email."</td><td>".$numero."</td><td>".$telefone."</td><td><a href='alterarU.php?id=$id'>Alterar</a></td><td><a href='controle.php?id=$id&funcao=deletar&tabela=unidade&pagina=visu_unid.php'>Deletar</a></td></tr>";
+                $this->string = "<tr><td>".$cep."</td><td>".$email."</td><td>".$numero."</td><td>".$telefone."</td><td><a class='btn-crud' href='alterarU.php?id=$id'>Alterar</a></td><td><a class='btn-crud' href='controle.php?id=$id&funcao=deletar&tabela=unidade&pagina=visu_unid.php'>Deletar</a></td></tr>";
                 $this->html = $this->string;
             }
         }
@@ -83,30 +83,40 @@
 
     ?>
     </head>
+
     <body>
-        
-        <table>
 
-            <thead>
-                <tr>
-                    <th>CEP</th>
-                    <th>Email</th>
-                    <th>Número</th>
-                    <th>Telefone</th>
-                </tr>
-            </thead>
+        <div class="consulta">
+                
+            <div class="tabela">
+
+                <form id = 'bot_ret' action = 'visu_unid.php' method = 'POST'>
             
-            <tbody>
-                <?php echo $resultado; ?>
-            </tbody>
-    
-    </table>
+                    <table>
 
-    <form id = 'bot_ret' action = 'visu_unid.php' method = 'POST'>
+                        <thead>
+                            <tr>
+                                <th>CEP</th>
+                                <th>Email</th>
+                                <th>Número</th>
+                                <th>Telefone</th>
+                            </tr>
+                        </thead>
+                            
+                        <tbody>
+                            <?php echo $resultado; ?>
+                        </tbody>
+                    
+                    </table>
 
-        <button type = 'submit' name = 'btn_ret_vis' value = 'retornar'>Retornar</button><br>
+                    <br><br><button type = 'submit' name = 'btn_ret_vis' value = 'retornar'>Retornar</button><br>
 
-    </form>
+                </form>
 
-</body>
+            </div>
+
+        </div>
+
+    </body>
+
 </html>

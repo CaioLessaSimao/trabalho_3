@@ -130,7 +130,8 @@
                                 
                             <?php endwhile; ?>
 
-                        </select><br>
+                        </select><br><br>
+
                     <label for = 'tipo'>Selecione o tipo de Carteira de Habilitação:</label>
                     <select name = 'tipo' form = 'form_cnh'>
                         <option value = 'A'>Tipo A (motos e triciclos)</option>
@@ -138,9 +139,9 @@
                         <option value = 'C'>Tipo C (veículos de carga acima de 3,5 ton)</option>
                         <option value = 'D'>Tipo D (veículos com mais de 8 passageiros)</option>
                         <option value = 'E'>Tipo E (veículos com unidade acoplada acima de 6 ton)</option>
-                    </select><br>
+                    </select><br><br>
                         
-                    <button type = 'submit' name = 'btn_cad_cnh' value = 'finalizar'>Finalizar Cadastro</button><br>
+                    <button type = 'submit' name = 'btn_cad_cnh' value = 'finalizar'>Finalizar Cadastro</button><br><br>
                     <button type = 'submit' name = 'btn_cad_cnh' value = 'retornar'>Retornar</button><br>
                 </form>
             <div>

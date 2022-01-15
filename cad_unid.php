@@ -98,9 +98,9 @@
                     <input type = 'text' name = 'tel'></input><br>
 
                     <label for = 'email'>Insira o email da unidade</label>
-                    <input type = 'email' name = 'email'></input><br>
+                    <input type = 'email' name = 'email'></input><br><br>
 
-                    <button type = 'submit' name = 'btn_cad_unid' value = 'finalizar'>Finalizar</button><br>
+                    <button type = 'submit' name = 'btn_cad_unid' value = 'finalizar'>Finalizar</button><br><br>
                     <button type = 'submit' name = 'btn_cad_unid' value = 'retornar'>Retornar</button>
                 </form>
             

@@ -88,9 +88,9 @@
                     <input type = 'text' name = 'cpf'/><br>
 
                     <label for = 'tel'>Insira o telefone do motorista:</label>
-                    <input type = 'text' name = 'tel'/><br>
+                    <input type = 'text' name = 'tel'/><br><br>
                     
-                    <button type = 'submit' name = 'btn_cad_mot' value = 'finalizar'>Finalizar Cadastro</button><br>
+                    <button type = 'submit' name = 'btn_cad_mot' value = 'finalizar'>Finalizar Cadastro</button><br><br>
                     <button type = 'submit' name = 'btn_cad_mot' value = 'retornar'>Retornar</button><br>
                 </form>
 

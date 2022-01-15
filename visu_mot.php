@@ -80,32 +80,40 @@
         }
     ?>
     </head>
+
     <body>
-        
-        <table>
 
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Email</th>
-                    <th>CPF</th>
-                    <th>Telefone</th>
-                </tr>
-            </thead>
+        <div class="consulta">
             
-            <tbody>
-                <?php echo $resultado; ?>
-            </tbody>
-    
-    </table>
+            <div class="tabela"> 
 
-    <form id = 'bot_ret' action = 'visu_mot.php' method = 'POST'>
+                <form id = 'bot_ret' action = 'visu_mot.php' method = 'POST'>
+            
+                    <table>
 
-        <button type = 'submit' name = 'btn_ret_vis' value = 'retornar'>Retornar</button><br>
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Email</th>
+                                <th>CPF</th>
+                                <th>Telefone</th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody>
+                            <?php echo $resultado; ?>
+                        </tbody>
+                
+                    </table>
 
-    </form>
-    
+                    <br><br><button type = 'submit' name = 'btn_ret_vis' value = 'retornar'>Retornar</button><br>
 
-</body>
+                </form>
+
+            </div>
+
+        </div>
+
+    </body>
 
 </html>

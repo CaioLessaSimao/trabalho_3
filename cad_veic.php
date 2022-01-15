@@ -136,7 +136,7 @@
                                 
                             <?php endwhile; ?>
 
-                        </select><br>
+                        </select><br><br>
                     <label for = 'tipo'>Selecione o tipo de veículo:</label>
                     <select name = 'tipo' form = 'form_veic'>
                         <option value = 'A'>moto ou triciclo</option>
@@ -144,7 +144,7 @@
                         <option value = 'C'>veículo de carga acima de 3,5 ton</option>
                         <option value = 'D'>veículo com mais de 8 passageiros</option>
                         <option value = 'E'>veículo com unidade acoplada acima de 6 ton</option>
-                    </select><br>
+                    </select><br><br>
                     
                     <label for = 'marca'>Selecione a marca do automóvel:</label>
                     <select name = 'marca' form = 'form_veic'>
@@ -161,9 +161,9 @@
                         <option value = 'HON'>Honda</option>
                         <option value = 'NIS'>Nissan</option>
                         <option value = 'JEE'>Jeep</option>
-                    </select><br>
+                    </select><br><br>
 
-                    <button type = 'submit' name = 'btn_cad_veic' value = 'finalizar'>Finalizar Cadastro</button><br>
+                    <button type = 'submit' name = 'btn_cad_veic' value = 'finalizar'>Finalizar Cadastro</button><br><br>
                     <button type = 'submit' name = 'btn_cad_veic' value = 'retornar'>Retornar</button><br>
                 </form>
                 

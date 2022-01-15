@@ -32,7 +32,7 @@
             public $html;
 
             function __construct($id,$nome, $numero, $tipo, $data_emissao, $data_vencimento){
-                $this->string = "<tr><td>".$nome."</td><td>".$numero."</td><td>".$tipo."</td><td>".$data_emissao."</td><td>".$data_vencimento."</td><td><a href='alterarC.php?id=$id'>Alterar</a></td><td><a href='controle.php?id=$id&funcao=deletar&tabela=cnh&pagina=visu_cnh.php'>Deletar</a></td></tr>";
+                $this->string = "<tr><td>".$nome."</td><td>".$numero."</td><td>".$tipo."</td><td>".$data_emissao."</td><td>".$data_vencimento."</td><td><a class='btn-crud' href='alterarC.php?id=$id'>Alterar</a></td><td><a class='btn-crud' href='controle.php?id=$id&funcao=deletar&tabela=cnh&pagina=visu_cnh.php'>Deletar</a></td></tr>";
                 $this->html = $this->string;
             }
         }
@@ -87,33 +87,40 @@
         }
     ?>
     </head>
+
     <body>
-        
-        <table>
 
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Número</th>
-                    <th>Tipo</th>
-                    <th>Data de emissão</th>
-                    <th>Data de vencimento</th>
-                </tr>
-            </thead>
+        <div class="consulta">
             
-            <tbody>
-                <?php echo $resultado; ?>
-            </tbody>
+            <div class="tabela">
+        
+                <form id = 'bot_ret' action = 'visu_cnh.php' method = 'POST'>
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Número</th>
+                                <th>Tipo</th>
+                                <th>Data de emissão</th>
+                                <th>Data de vencimento</th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody>
+                            <?php echo $resultado; ?>
+                        </tbody>
+                
+                    </table>
+
+                    <br><br><button type = 'submit' name = 'btn_ret_vis' value = 'retornar'>Retornar</button><br>
+
+                </form>
+            
+            </div>
+
+        </div>
     
-    </table>
-
-
-    <form id = 'bot_ret' action = 'visu_cnh.php' method = 'POST'>
-
-        <button type = 'submit' name = 'btn_ret_vis' value = 'retornar'>Retornar</button><br>
-
-    </form>
-    
-</body>
+    </body>
 
 </html>

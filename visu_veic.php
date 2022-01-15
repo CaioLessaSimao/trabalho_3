@@ -34,7 +34,7 @@
             public $html;
 
             function __construct($placa, $numero, $data_aquisicao, $consumo, $motorista, $tipo, $marca, $id){
-                $this->string = "<tr><td>".$placa."</td><td>".$numero."</td><td>".$data_aquisicao."</td><td>".$consumo."</td><td>".$motorista."</td><td>".$tipo."</td><td>".$marca."</td><td><a href='alterarV.php?id=$id'>Alterar</a></td><td><a href='controle.php?id=$id&funcao=deletar&tabela=veiculo&pagina=visu_veic.php'>Deletar</a></td></tr>";
+                $this->string = "<tr><td>".$placa."</td><td>".$numero."</td><td>".$data_aquisicao."</td><td>".$consumo."</td><td>".$motorista."</td><td>".$tipo."</td><td>".$marca."</td><td><a class='btn-crud' href='alterarV.php?id=$id'>Alterar</a></td><td><a class='btn-crud' href='controle.php?id=$id&funcao=deletar&tabela=veiculo&pagina=visu_veic.php'>Deletar</a></td></tr>";
                 $this->html = $this->string;
             }
         }
@@ -95,35 +95,44 @@
         }
     ?>
     </head>
+
+
     <body>
-        
-        <table>
 
-            <thead>
-                <tr>
-                    <th>Placa</th>
-                    <th>Número</th>
-                    <th>Data de Aquisição</th>
-                    <th>Consumo</th>
-                    <th>Motorista</th>
-                    <th>Tipo</th>
-                    <th>Marca</th>
-                </tr>
-            </thead>
+        <div class="consulta">
             
-            <tbody>
-                <?php echo $resultado; ?>
-            </tbody>
+            <div class="tabela">
+
+            <form id = 'bot_ret' action = 'visu_veic.php' method = 'POST'>
+        
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Placa</th>
+                                <th>Número</th>
+                                <th>Data de Aquisição</th>
+                                <th>Consumo</th>
+                                <th>Motorista</th>
+                                <th>Tipo</th>
+                                <th>Marca</th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody>
+                            <?php echo $resultado; ?>
+                        </tbody>
+                
+                    </table>
+
+                    <br><br><button type = 'submit' name = 'btn_ret_vis' value = 'retornar'>Retornar</button><br>
+
+                </form>
+            
+            </div>
     
-    </table>
+        </div>
 
-    <form id = 'bot_ret' action = 'visu_veic.php' method = 'POST'>
-
-        <button type = 'submit' name = 'btn_ret_vis' value = 'retornar'>Retornar</button><br>
-
-    </form>
-
-
-</body>
+    </body>
 
 </html>

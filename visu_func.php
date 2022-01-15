@@ -89,32 +89,41 @@
         }
     ?>
     </head>
+
     <body>
+
+        <div class="consulta">
         
-        <table>
+            <div class="tabela">    
 
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Email</th>
-                    <th>CPF</th>
-                    <th>Telefone</th>
-                    <th>Data de Nascimento</th>
-                </tr>
-            </thead>
+            <form id = 'bot_ret' action = 'visu_func.php' method = 'POST'>
+                
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>CPF</th>
+                            <th>Telefone</th>
+                            <th>Data de Nascimento</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <?php echo $resultado; ?>
+                    </tbody>
             
-            <tbody>
-                <?php echo $resultado; ?>
-            </tbody>
-    
-    </table>
+                </table>
 
-    <form id = 'bot_ret' action = 'visu_func.php' method = 'POST'>
+                    <br><br><button type = 'submit' name = 'btn_ret_vis' value = 'retornar'>Retornar</button><br>
 
-        <button type = 'submit' name = 'btn_ret_vis' value = 'retornar'>Retornar</button><br>
+                </form>
 
-    </form>
+            </div>
+        
+        </div>
 
-</body>
+    </body>
 
 </html>
